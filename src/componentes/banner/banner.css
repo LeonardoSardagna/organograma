@@ -1,7 +1,8 @@
 .banner{
-    background: #6278F7;
+    display: flex;
+    justify-content: center;
 }
 
 .banner img{
-    max-width: 100%;
+    width: 100%;
 }
