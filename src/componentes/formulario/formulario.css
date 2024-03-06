@@ -16,9 +16,10 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    font-weight: 400;
+    font-weight: bold;
     font-size: 32px;
     align-items: center;
+    color:#202329 ;
 }
 
 .imagemLogo{
