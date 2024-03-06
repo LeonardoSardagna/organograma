@@ -3,9 +3,14 @@ import Campotexto from "../campoTexto/campoTexto"
 import ListaSuspensa from "../listaSuspensa/listaSuspensa"
 import './formulario.css'
 
-const VivoOuMorto = [
-    "Vivo",
-    "Morto"
+
+const categoria = [
+    "Humanos normais",
+    "Alienígenas Bizarros",
+    "Criaturas Dimensionais",
+    "Entidades Cientificas",
+    "Robôs e seres mecânicos",
+    "Personagens de outras dimensões da realidade"
 ]
 
 const aoSalvar = (evento) =>{
@@ -21,7 +26,7 @@ function Formulario() {
                 <Campotexto obrigatorio={true} label="Espécie" placeholder="Digite a espécie" />
                 <Campotexto obrigatorio={true} label="Origem" placeholder="Digite a data de origem" />
                 <Campotexto obrigatorio={true} label="Imagem" placeholder="Informe o endereço da imagem" />
-                <ListaSuspensa label= "Vivo ou Morto?" itens={VivoOuMorto}/>
+                <ListaSuspensa label ="Categoria" itens={categoria}/>
                 <Botao>
                     Criar Card
                 </Botao>
