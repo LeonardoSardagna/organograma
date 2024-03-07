@@ -11,54 +11,53 @@ function Formulario(props) {
         "Criaturas Dimensionais",
         "Entidades Cientificas",
         "Robôs e seres mecânicos",
-        "Personagens de outras dimensões da realidade"
     ]
     
     const aoSalvar = (evento) =>{
         evento.preventDefault()
-        props.personagemCadastrado({
+        props.adicionaPersonagens({
             nome,
             origem,
             imagem,
-            Categoria,
+            Categoria
         })
     }
 
-    const [nome, nomeatualizado] = useState('')
-    const [origem, origematualizado] = useState('')
-    const [imagem, imagematualizado] = useState('')
-    const [Categoria, Categoriaatualizado] = useState('')
+    const [nome, setNome] = useState('')
+    const [origem, setOrigem] = useState('')
+    const [imagem, setImagem] = useState('')
+    const [Categoria, setCategoria] = useState('')
 
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
                 <h1>Lista de personagens do Rick And Morty</h1>
                 <Campotexto 
-                obrigatorio={true} 
-                label="Nome" 
-                placeholder="Digite o nome do personagem" 
-                valor ={nome}
-                alterado={valor => nomeatualizado(valor)}
+                    obrigatorio={true} 
+                    label="Nome" 
+                    placeholder="Digite o nome do personagem" 
+                    valor={nome}
+                    alterar={valor => setNome(valor)}
                 />
                 <Campotexto 
-                obrigatorio={true} 
-                label="Origem" 
-                placeholder="Lugar de origem, ano" 
-                valor ={origem}
-                alterado={valor => origematualizado(valor)}
+                    obrigatorio={true} 
+                    label="Origem" 
+                    placeholder="Lugar de origem, ano" 
+                    valor={origem}
+                    alterar={valor => setOrigem(valor)}
                 />
                 <Campotexto 
-                obrigatorio={true} 
-                label="Imagem" 
-                placeholder="Informe o endereço da imagem" 
-                valor ={imagem}
-                alterado={valor => imagematualizado(valor)}
+                    obrigatorio={true} 
+                    label="Imagem" 
+                    placeholder="Informe o endereço da imagem" 
+                    valor={imagem}
+                    alterar={valor => setImagem(valor)}
                 />
                 <ListaSuspensa 
-                label ="Categoria" 
-                itens={categoria}
-                valor ={Categoria}
-                alterado={valor => Categoriaatualizado(valor)}
+                    label ="Categoria" 
+                    itens={categoria}
+                    valor={Categoria}
+                    alterar={valor => setCategoria(valor)}
                 />
                 <Botao>
                     Criar Card

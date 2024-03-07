@@ -6,18 +6,15 @@ function App() {
 
   const [personagens, setPersonagens] = useState([])
 
-  const novoPersonagem = (personagem) =>{
-    console.log(personagem)
-    setPersonagens([...personagens, personagem])
+  const criarPersonagem = (personagem) =>{
+    setPersonagens({...personagens, personagem})
   }
 
   return (
     <div className="App">
       <Banner/>
-      <Formulario personagemCadastrado ={personagem => novoPersonagem(personagem)}
-      />
+      <Formulario adicionaPersonagens={personagem => criarPersonagem(personagem)}/>
     </div>
   );
 }
-
 export default App;
