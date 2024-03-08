@@ -5,14 +5,12 @@ import ListaSuspensa from "../listaSuspensa/listaSuspensa"
 import './formulario.css'
 
 function Formulario(props) {
-    const categoria = [
-        "Humanos normais",
-        "Alienígenas Bizarros",
-        "Criaturas Dimensionais",
-        "Entidades Cientificas",
-        "Robôs e seres mecânicos",
-    ]
-    
+
+    const [nome, setNome] = useState("")
+    const [origem, setOrigem] = useState("")
+    const [imagem, setImagem] = useState("")
+    const [Categoria, setCategoria] = useState("")
+
     const aoSalvar = (evento) =>{
         evento.preventDefault()
         props.personagemCriado({
@@ -21,13 +19,13 @@ function Formulario(props) {
             imagem,
             Categoria
         })
+        setNome('')
+        setOrigem('')
+        setImagem('')
+        setCategoria('')
     }
 
-    const [nome, setNome] = useState("")
-    const [origem, setOrigem] = useState("")
-    const [imagem, setImagem] = useState("")
-    const [Categoria, setCategoria] = useState("")
-
+    
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
@@ -55,7 +53,7 @@ function Formulario(props) {
                 />
                 <ListaSuspensa 
                     label ="Categoria" 
-                    itens={categoria}
+                    itens={props.listaCategoria}
                     valor={Categoria}
                     alterado={valor => setCategoria(valor)}
                 />

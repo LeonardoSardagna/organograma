@@ -9,3 +9,10 @@
     display: inline-block;
     padding-bottom: 8px;
 }
+
+.time .area_do_time{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 32px
+}

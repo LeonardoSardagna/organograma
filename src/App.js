@@ -6,45 +6,50 @@ import Categoria from './componentes/time/categoria';
 function App() {
 
   const [personagens, setPersonagens] = useState([])
-
   const novoPersonagem = (personagem) =>{
-    setPersonagens({...personagens, personagem})
-    console.log(personagem)
+    setPersonagens([...personagens, personagem])
   }
 
   const categorias = [
     {
       nome:"Humanos normais",
-      corPrimaria:"",
-      corSecundaria:"",
+      corPrimaria:"#FFBA05",
+      corSecundaria:"#FFF5D9",
     },
     {
       nome:"Alienígenas Bizarros",
-      corPrimaria:"",
-      corSecundaria:"",
+      corPrimaria:"#57C278",
+      corSecundaria:"#D9F7E9",
     },
     {
       nome:"Criaturas Dimensionais",
-      corPrimaria:"",
-      corSecundaria:"",
+      corPrimaria:"#82CFFA",
+      corSecundaria:"#E8F8FF",
     },
     {
       nome:"Entidades Cientificas",
-      corPrimaria:"",
-      corSecundaria:"",
+      corPrimaria:"#A6D157",
+      corSecundaria:"#F0F8E2",
     },
     {
       nome:"Robôs e seres mecânicos",
-      corPrimaria:"",
-      corSecundaria:"",
+      corPrimaria:"#F2F2F2",
+      corSecundaria:"#A9A9A9 ",
     },
   ]
   
   return (
     <div className="App">
       <Banner/>
-      <Formulario personagemCriado={personagem => novoPersonagem(personagem)} />
-      {categorias.map(categoria => <Categoria nome={categoria.nome} corPrimaria={categoria.corPrimaria} corSecundaria={categoria.corSecundaria} />)}
+      <Formulario listaCategoria = {categorias.map(lista => lista.nome)} personagemCriado={personagem => novoPersonagem(personagem)} />
+      {categorias.map(categoria => <Categoria 
+      key={categoria.nome} 
+      nome={categoria.nome} 
+      corPrimaria={categoria.corPrimaria} 
+      corSecundaria={categoria.corSecundaria}
+      personagem={personagens.filter(personagem => personagem.Categoria === categoria.nome)}
+      />)}
+
     </div>
   );
 }
