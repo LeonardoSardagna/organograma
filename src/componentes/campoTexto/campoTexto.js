@@ -3,7 +3,7 @@ import './campoTexto.css'
 const Campotexto = (props) =>{
 
     const aoDigitar = (evento) =>{
-        props.alterar(evento.target.value)
+        props.alterado(evento.target.value)
     }
 
     return(

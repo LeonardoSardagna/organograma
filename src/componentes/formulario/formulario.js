@@ -15,7 +15,7 @@ function Formulario(props) {
     
     const aoSalvar = (evento) =>{
         evento.preventDefault()
-        props.adicionaPersonagens({
+        props.personagemCriado({
             nome,
             origem,
             imagem,
@@ -23,10 +23,10 @@ function Formulario(props) {
         })
     }
 
-    const [nome, setNome] = useState('')
-    const [origem, setOrigem] = useState('')
-    const [imagem, setImagem] = useState('')
-    const [Categoria, setCategoria] = useState('')
+    const [nome, setNome] = useState("")
+    const [origem, setOrigem] = useState("")
+    const [imagem, setImagem] = useState("")
+    const [Categoria, setCategoria] = useState("")
 
     return (
         <section className="formulario">
@@ -37,27 +37,27 @@ function Formulario(props) {
                     label="Nome" 
                     placeholder="Digite o nome do personagem" 
                     valor={nome}
-                    alterar={valor => setNome(valor)}
+                    alterado={valor => setNome(valor)}
                 />
                 <Campotexto 
                     obrigatorio={true} 
                     label="Origem" 
                     placeholder="Lugar de origem, ano" 
                     valor={origem}
-                    alterar={valor => setOrigem(valor)}
+                    alterado={valor => setOrigem(valor)}
                 />
                 <Campotexto 
                     obrigatorio={true} 
                     label="Imagem" 
                     placeholder="Informe o endereço da imagem" 
                     valor={imagem}
-                    alterar={valor => setImagem(valor)}
+                    alterado={valor => setImagem(valor)}
                 />
                 <ListaSuspensa 
                     label ="Categoria" 
                     itens={categoria}
                     valor={Categoria}
-                    alterar={valor => setCategoria(valor)}
+                    alterado={valor => setCategoria(valor)}
                 />
                 <Botao>
                     Criar Card
@@ -66,5 +66,4 @@ function Formulario(props) {
         </section>
     )
 }
-//
 export default Formulario
