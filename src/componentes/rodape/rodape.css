@@ -1,0 +1,29 @@
+.rodape{
+    display: flex;
+    background-color: #252525;
+    height: 250px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px 32px 32px;
+}
+
+.rodape ul{
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.rodape p {
+    color: white;
+    font-size: 1.5em;
+}
+
+.rodape a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.rick{
+   height: 100%;
+}
