@@ -3,6 +3,7 @@ import Banner from './componentes/banner/banner';
 import Formulario from './componentes/formulario/formulario';
 import Categoria from './componentes/time/categoria';
 import Rodape from './componentes/rodape/rodape';
+import Personagensestaticos from './personagens/personagens';
 
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
       corSecundaria={categoria.corSecundaria}
       personagem={personagens.filter(personagem => personagem.Categoria === categoria.nome)}
       />)}
+      <Personagensestaticos/>
       <footer>
         <Rodape/>
       </footer>
