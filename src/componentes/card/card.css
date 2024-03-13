@@ -1,6 +1,7 @@
 .personagem{
     width: 280px;
     margin-top: 32px;
+    position: relative;
 }
 
 .personagem .personagem_cabecalho{
@@ -36,4 +37,11 @@
     line-height: 22px;
     color: #212121;
     padding: 0 16px;
+}
+
+.deletar{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
 }

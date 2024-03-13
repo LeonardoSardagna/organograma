@@ -12,6 +12,7 @@ const Personagensestaticos = () =>{
         }
         dados()
     }, [])
+
     return(
         
         <div className="container">
