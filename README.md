@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+<h1 align="left">Rick and Morty Organo</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###
 
-## Available Scripts
+<h2 align="left">Project Description</h2>
 
-In the project directory, you can run:
+###
 
-### `npm start`
+<p align="left">The Rick and Morty Organo project is a web application developed in React, inspired by the animated series "Rick and Morty". It consists of a form where users can fill in information to be added to teams, which are inspired by the different universes and characters of the series.<br><br>The site also consumes the Rick and Morty API to display some of the series' characters.</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+###
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h2 align="left">Features</h2>
 
-### `npm test`
+###
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="left">Registration Form:<br>Users can fill in personal information such as name, origin, image, category.<br>After filling out the form, users are automatically added to the selected category.</p>
 
-### `npm run build`
+###
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h2 align="left">Technologies Used</h2>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+###
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="left">React: JavaScript library for building user interfaces.<br>HTML5: Markup language for structuring web content.<br>CSS3: Style language for website design and presentation.<br>Rick and Morty API: Public API for accessing information about the series' characters.</p>
 
-### `npm run eject`
+###
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h2 align="left">Installation and Execution</h2>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+###
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="left">The project utilizes the Create React App to facilitate React development. Below are the main scripts available:<br><br>npm start: Starts the app in development mode, allowing you to view it at http://localhost:3000. The app will reload automatically after changes, and lint errors can be viewed in the console.<br><br>npm test: Launches the test runner in interactive watch mode. See the documentation for more details on testing.<br><br>npm run build: Builds the app for production to the build folder, optimizing it for best performance. The result is ready to be deployed.<br><br>npm run eject: Allows for advanced customization by copying all configuration files and dependencies directly into the project. This action is irreversible.</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+###
