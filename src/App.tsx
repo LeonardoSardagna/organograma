@@ -1,14 +1,16 @@
 import { useState } from 'react';
-import Banner from './componentes/banner/banner';
-import Formulario from './componentes/formulario/formulario';
-import Categoria from './componentes/time/categoria';
-import Rodape from './componentes/rodape/rodape';
-import Personagensestaticos from './personagens/personagens';
+import {Banner} from './componentes/banner/banner';
+import {Formulario} from './componentes/formulario/formulario';
+import {Categoria} from './componentes/time/categoria';
+import {Rodape} from './componentes/rodape/rodape';
+import {Personagensestaticos} from './personagens/personagens';
+import { IPersonagem } from './compartilhado/interface/IPersonagem';
+
 
 function App() {
 
-  const [personagens, setPersonagens] = useState([])
-  const novoPersonagem = (personagem) =>{
+  const [personagens, setPersonagens] = useState<IPersonagem[]>([])
+  const novoPersonagem = (personagem: IPersonagem) =>{
     setPersonagens([...personagens, personagem])
   }
 
@@ -42,7 +44,7 @@ function App() {
   
   return (
     <div className="App">
-      <Banner/>
+      <Banner src='imagens/rickbanner.png' alt='O banner principal da página'/>
       <Formulario listaCategoria = {categorias.map(lista => lista.nome)} personagemCriado={personagem => novoPersonagem(personagem)} />
       {categorias.map(categoria => <Categoria 
       key={categoria.nome} 

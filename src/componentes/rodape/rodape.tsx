@@ -1,6 +1,6 @@
 import "./rodape.css"
 
-const Rodape = () => {
+export function Rodape() {
     return (
         <footer className="rodape">
             <div>
@@ -21,5 +21,3 @@ const Rodape = () => {
         </footer>
     )
 }
-
-export default Rodape

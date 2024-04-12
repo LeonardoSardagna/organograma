@@ -1,17 +1,23 @@
 import { useState } from "react"
-import Botao from "../botao/botao"
-import Campotexto from "../campoTexto/campoTexto"
-import ListaSuspensa from "../listaSuspensa/listaSuspensa"
+import { Botao } from "../botao/botao"
+import {Campotexto} from "../campoTexto/campoTexto"
+import {ListaSuspensa} from "../listaSuspensa/listaSuspensa"
 import './formulario.css'
+import { IPersonagem } from "../../compartilhado/interface/IPersonagem"
 
-function Formulario(props) {
+interface FormularioProps{
+    personagemCriado: (personagem: IPersonagem) => void
+    listaCategoria: string[]
+}
+
+export function Formulario(props: FormularioProps) {
 
     const [nome, setNome] = useState("")
     const [origem, setOrigem] = useState("")
     const [imagem, setImagem] = useState("")
     const [Categoria, setCategoria] = useState("")
 
-    const aoSalvar = (evento) =>{
+    const aoSalvar = (evento: React.FormEvent<HTMLFormElement>) =>{
         evento.preventDefault()
         props.personagemCriado({
             nome,
@@ -64,4 +70,3 @@ function Formulario(props) {
         </section>
     )
 }
-export default Formulario

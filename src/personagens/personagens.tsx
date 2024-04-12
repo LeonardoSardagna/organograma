@@ -2,8 +2,14 @@ import "./personagens.css"
 import { useEffect } from "react"
 import { useState } from "react"
 
-const Personagensestaticos = () =>{
-    const [perso, setperso] = useState([])
+interface PersonagemProps {
+    image: string
+    name: string
+    species: string
+}
+
+export function Personagensestaticos(){
+    const [perso, setperso] = useState<PersonagemProps[]>([])
     useEffect(() => {
         const dados = async() =>{
             const resposta = await fetch('https://rickandmortyapi.com/api/character')
@@ -33,5 +39,3 @@ const Personagensestaticos = () =>{
         </div>
     )
 }
-
-export default Personagensestaticos

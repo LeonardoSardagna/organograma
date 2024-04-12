@@ -1,6 +1,11 @@
+import { IPersonagem } from "../../compartilhado/interface/IPersonagem"
 import "./card.css"
 
-const Card = ({nome, origem, imagem, corDeFundo, aoDeletar}) =>{
+export interface CardProps extends IPersonagem{
+    corDeFundo:string
+}
+
+export function Card ({nome, origem, imagem, corDeFundo}:CardProps){
     return(
         <div className="personagem">
             <div className="personagem_cabecalho" style={{backgroundColor: corDeFundo}}>
@@ -13,5 +18,3 @@ const Card = ({nome, origem, imagem, corDeFundo, aoDeletar}) =>{
         </div>
     )
 }
-
-export default Card
