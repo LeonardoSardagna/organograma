@@ -6,9 +6,10 @@ interface CampoTextoProps{
     obrigatorio: boolean
     placeholder: string
     alterado: (valor: string)=>void
+    tipo?: 'date' | 'email' | 'number' | 'password' | 'text' | 'url'
 }
 
-export function Campotexto ({label,obrigatorio,placeholder,valor, alterado}:CampoTextoProps) {
+export function Campotexto ({label,obrigatorio,placeholder,valor, alterado, tipo='text'}:CampoTextoProps) {
 
     const aoDigitar = (evento:React.ChangeEvent<HTMLInputElement>) => {
         alterado(evento.target.value)
@@ -21,7 +22,9 @@ export function Campotexto ({label,obrigatorio,placeholder,valor, alterado}:Camp
                 onChange={aoDigitar}
                 value={valor}
                 required={obrigatorio}
-                placeholder={placeholder} />
+                placeholder={placeholder}
+                type={tipo}
+            />
         </div>
     )
 }

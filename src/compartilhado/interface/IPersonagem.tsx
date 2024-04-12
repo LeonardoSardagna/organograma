@@ -3,4 +3,5 @@ export interface IPersonagem{
     origem: string
     imagem: string
     Categoria?: string
+    data: string
 }

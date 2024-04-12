@@ -23,6 +23,7 @@ export function Categoria (props:CategoriaProps) {
                 origem={personagens.origem} 
                 imagem={personagens.imagem} 
                 corDeFundo={props.corPrimaria}
+                data={personagens.data}
                 />
                 )}
             </div>

@@ -16,6 +16,7 @@ export function Formulario(props: FormularioProps) {
     const [origem, setOrigem] = useState("")
     const [imagem, setImagem] = useState("")
     const [Categoria, setCategoria] = useState("")
+    const [data, setData] = useState("")
 
     const aoSalvar = (evento: React.FormEvent<HTMLFormElement>) =>{
         evento.preventDefault()
@@ -23,12 +24,14 @@ export function Formulario(props: FormularioProps) {
             nome,
             origem,
             imagem,
-            Categoria
+            Categoria,
+            data
         })
         setNome('')
         setOrigem('')
         setImagem('')
         setCategoria('')
+        setData('')
     }
 
     
@@ -42,13 +45,23 @@ export function Formulario(props: FormularioProps) {
                     placeholder="Digite o nome do personagem" 
                     valor={nome}
                     alterado={valor => setNome(valor)}
+                    tipo="text"
                 />
                 <Campotexto 
                     obrigatorio={true} 
                     label="Origem" 
-                    placeholder="Lugar de origem, ano" 
+                    placeholder="Lugar de origem" 
                     valor={origem}
                     alterado={valor => setOrigem(valor)}
+                    tipo="text"
+                />
+                <Campotexto
+                    obrigatorio={true}
+                    label="Visto pela primeira vez em:"
+                    placeholder=""
+                    valor={data}
+                    alterado={valor => setData(valor)}
+                    tipo="date"
                 />
                 <Campotexto 
                     obrigatorio={true} 
@@ -56,6 +69,7 @@ export function Formulario(props: FormularioProps) {
                     placeholder="Informe o endereço da imagem" 
                     valor={imagem}
                     alterado={valor => setImagem(valor)}
+                    tipo="url"
                 />
                 <ListaSuspensa 
                     label ="Categoria" 
